@@ -7,8 +7,9 @@
     require('config.php');
     require(INCLUDES_PATH . '/models/db.php');
     require(INCLUDES_PATH . 'helpers.php');
-    
-    echo "HEADER LOADED SUCCESSFULLY";
+
+    //Print Config XML
+    var_dump(xmlToArray('config.xml'));
 
 
 

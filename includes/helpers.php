@@ -12,3 +12,43 @@
             return false;
         }
     }
+
+    /**
+     * @param $path
+     * @return array
+     * Converts the contents of an XML file to an array
+     */
+    function xmlToArray($path){
+
+        $xml   = simplexml_load_file($path);
+        $array = xmlElementToArray($xml);
+        $array = array($xml->getName() => $array);
+
+        return $array;
+    }
+
+    /**
+     * @param SimpleXMLElement $parent
+     * @return array
+     * Converts a SimpleXMLElemnt to an array
+     */
+
+    function xmlElementToArray(SimpleXMLElement $parent){
+
+        $array = array();
+
+        foreach ($parent as $name => $element) {
+            ($node = & $array[$name])
+            && (1 === count($node) ? $node = array($node) : 1)
+            && $node = & $node[];
+
+            $node = $element->count() ? xmlElementToArray($element) : trim($element);
+        }
+
+        return $array;
+    }
+
+
+
+
+
