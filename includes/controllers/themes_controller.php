@@ -1,0 +1,5 @@
+<?php
+
+    /**
+     * Emberdyn Themes Controller
+     */

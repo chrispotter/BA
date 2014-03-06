@@ -5,7 +5,7 @@
      */
 
     require('config.php');
-    require(INCLUDES_PATH . 'db.php');
+    require(INCLUDES_PATH . '/models/db.php');
     require(INCLUDES_PATH . 'helpers.php');
 
 

@@ -124,7 +124,7 @@ class Database{
         $q->execute();
         $table_fields = $q->fetchAll(PDO::FETCH_COLUMN);
         return $table_fields;
-        
+
     }
 
 }
