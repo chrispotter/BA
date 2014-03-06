@@ -59,6 +59,7 @@ class Database{
         $statement->execute();
 
         return $statement->fetchAll(PDO::FETCH_ASSOC);
+        
     }
 
     /**
@@ -67,6 +68,7 @@ class Database{
      * Handles insertions in to the database
      */
     function insert($table, $values){
+        
         $fieldnames = array_keys($values);
 
         $sql = "INSERT INTO $table";
@@ -76,6 +78,7 @@ class Database{
 
         $statement = $this->db->prepare($sql);
         $statement->execute($values);
+        
     }
 
     /**
@@ -87,11 +90,13 @@ class Database{
      * Handles database updates.
      */
     function update($table, $fieldname, $value, $where_key, $id){
+        
         $sql = "UPDATE `$table` SET `$fieldname`= :value WHERE `$where_key` = :id";
         $statement = $this->db->prepare($sql);
         $statement->bindParam(':id', $id);
         $statement->bindParam(':value', $value);
         $statement->execute();
+        
     }
 
     /**
@@ -101,11 +106,18 @@ class Database{
      * Handles deletes from the database
      */
     function delete($table, $fieldname=null, $id=null){
+        
         $sql = "DELETE FROM `$table`";
-        $sql .=($fieldname != null && $id != null)?" WHERE $fieldname=:id":null;
+        $sql .= ($fieldname != null && $id != null) ? " WHERE $fieldname=:id" : null;
+        
         $statement = $this->db->prepare($sql);
-        if($fieldname != null && $id != null){$statement->bindParam(':id', $id);}
+        
+        if($fieldname != null && $id != null){
+            $statement->bindParam(':id', $id);
+        }
+        
         $statement->execute();
+        
     }
 
     /**
@@ -114,10 +126,14 @@ class Database{
      * Returns an array of fields in the given table
      */
     function getFields($table){
+        
         $q = $this->db->prepare("DESCRIBE {$table}");
         $q->execute();
+        
         $table_fields = $q->fetchAll(PDO::FETCH_COLUMN);
+        
         return $table_fields;
+        
     }
 
 }
