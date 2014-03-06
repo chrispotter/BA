@@ -25,7 +25,7 @@
     define('DB_HOST',           'localhost');   //Database Server/Hostname
     define('DB_NAME',           'emberdyn');    //Database Name
     define('DB_USER',           'emberdyn');    //Database Username
-    define('DB_PASSWORD',       'emberdyn');    //Database Password
-    define('DB_TABLE_PREFIX',   'em_');         //Database Table Prefix
+    define('DB_PASS',           'emberdyn');    //Database Password
+    define('DB_TBL_PREFIX',     'em_');         //Database Table Prefix
     //------------------------------------------------------------------------------------------------------------||
 

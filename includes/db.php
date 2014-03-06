@@ -6,7 +6,7 @@
         function __construct(){
             $this->dsn 	= DB_DRIVER . ":host=" . DB_HOST . ";dbname=" . DB_NAME;
             $this->user = DB_USER;
-            $this->pass = DB_PASSWORD;
+            $this->pass = DB_PASS;
             //Connect
             $this->connect();
         }
