@@ -81,15 +81,15 @@ class Database{
 
     /**
      * @param $table
-     * @param $fieldname
+     * @param $field_name
      * @param $value
      * @param $where_key
      * @param $id
      * Handles database updates.
      */
-    function update($table, $fieldname, $value, $where_key, $id){
+    function update($table, $field_name, $value, $where_key, $id){
 
-        $sql = "UPDATE `$table` SET `$fieldname`= :value WHERE `$where_key` = :id";
+        $sql = "UPDATE `$table` SET `$field_name`= :value WHERE `$where_key` = :id";
         $statement = $this->db->prepare($sql);
         $statement->bindParam(':id', $id);
         $statement->bindParam(':value', $value);
@@ -99,16 +99,16 @@ class Database{
 
     /**
      * @param $table
-     * @param null $fieldname
+     * @param null $field_name
      * @param null $id
      * Handles deletes from the database
      */
-    function delete($table, $fieldname=null, $id=null){
+    function delete($table, $field_name=null, $id=null){
 
         $sql = "DELETE FROM `$table`";
-        $sql .=($fieldname != null && $id != null)?" WHERE $fieldname=:id":null;
+        $sql .=($field_name != null && $id != null)?" WHERE $field_name=:id":null;
         $statement = $this->db->prepare($sql);
-        if($fieldname != null && $id != null){$statement->bindParam(':id', $id);}
+        if($field_name != null && $id != null){$statement->bindParam(':id', $id);}
         $statement->execute();
 
     }
