@@ -38,7 +38,7 @@
       <file leaf-file-name="db.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/models/db.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="7" selection-start="2144" selection-end="2144" vertical-scroll-proportion="-9.333333" vertical-offset="1296" max-vertical-offset="2412">
+            <state line="88" column="7" selection-start="2144" selection-end="2144" vertical-scroll-proportion="-13.333333" vertical-offset="1188" max-vertical-offset="2412">
               <folding>
                 <marker date="1394163292140" expanded="true" signature="1118:1138" placeholder="SELECT * FRO..." />
                 <marker date="1394163292140" expanded="true" signature="1708:1726" placeholder="INSERT INTO ..." />
@@ -48,10 +48,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="users.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/models/users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="0" selection-start="1854" selection-end="1854" vertical-scroll-proportion="0.70863307" vertical-offset="1208" max-vertical-offset="1764">
+            <state line="89" column="26" selection-start="2088" selection-end="2088" vertical-scroll-proportion="-16.666666" vertical-offset="1152" max-vertical-offset="1836">
               <folding>
                 <element signature="e#11#58#0" expanded="true" />
               </folding>
@@ -68,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="emberdyn_header.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="emberdyn_header.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/emberdyn_header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="857" selection-end="857" vertical-scroll-proportion="-14.666667" vertical-offset="0" max-vertical-offset="792">
+            <state line="20" column="27" selection-start="811" selection-end="811" vertical-scroll-proportion="0.38848922" vertical-offset="108" max-vertical-offset="810">
               <folding />
             </state>
           </provider>
@@ -130,10 +130,10 @@
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/includes/models/db.php" />
         <option value="$PROJECT_DIR$/includes/models/models.php" />
-        <option value="$PROJECT_DIR$/emberdyn_header.php" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/includes/models/users.php" />
+        <option value="$PROJECT_DIR$/emberdyn_header.php" />
       </list>
     </option>
   </component>
@@ -757,37 +757,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="1981" selection-end="1981" vertical-scroll-proportion="-16.592592" vertical-offset="128" max-vertical-offset="702">
-          <folding>
-            <element signature="e#11#107#0" expanded="true" />
-            <marker date="1394167582246" expanded="true" signature="1737:1839" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="24" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/models/db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="7" selection-start="2144" selection-end="2144" vertical-scroll-proportion="-9.333333" vertical-offset="1296" max-vertical-offset="2412">
-          <folding>
-            <marker date="1394163292140" expanded="true" signature="1118:1138" placeholder="SELECT * FRO..." />
-            <marker date="1394163292140" expanded="true" signature="1708:1726" placeholder="INSERT INTO ..." />
-            <marker date="1394163292140" expanded="true" signature="2682:2702" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/emberdyn_header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="857" selection-end="857" vertical-scroll-proportion="-14.666667" vertical-offset="0" max-vertical-offset="792">
           <folding />
         </state>
       </provider>
@@ -801,12 +773,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="1981" selection-end="1981" vertical-scroll-proportion="-16.592592" vertical-offset="128" max-vertical-offset="702">
+          <folding>
+            <element signature="e#11#107#0" expanded="true" />
+            <marker date="1394167582246" expanded="true" signature="1737:1839" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/models/users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="0" selection-start="1854" selection-end="1854" vertical-scroll-proportion="0.70863307" vertical-offset="1208" max-vertical-offset="1764">
+        <state line="89" column="26" selection-start="2088" selection-end="2088" vertical-scroll-proportion="-16.666666" vertical-offset="1152" max-vertical-offset="1836">
           <folding>
             <element signature="e#11#58#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/models/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="7" selection-start="2144" selection-end="2144" vertical-scroll-proportion="-13.333333" vertical-offset="1188" max-vertical-offset="2412">
+          <folding>
+            <marker date="1394163292140" expanded="true" signature="1118:1138" placeholder="SELECT * FRO..." />
+            <marker date="1394163292140" expanded="true" signature="1708:1726" placeholder="INSERT INTO ..." />
+            <marker date="1394163292140" expanded="true" signature="2682:2702" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/emberdyn_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="27" selection-start="811" selection-end="811" vertical-scroll-proportion="0.38848922" vertical-offset="108" max-vertical-offset="810">
+          <folding />
         </state>
       </provider>
     </entry>

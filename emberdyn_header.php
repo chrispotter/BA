@@ -26,7 +26,8 @@
 
     $user = new Users(7);
     $user->setFirstName('Jimmy');
-    $user->save();
+    print_r($user->getValues());
+
 
 
 

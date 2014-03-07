@@ -82,8 +82,12 @@
 
         function save(){
             //WORK ON ME!!!
+        }
 
-
+        function getValues(){
+            $array = array( $this->getId(), $this->getFirstName(), $this->getLastName(),
+                            $this->getEmail(), $this->getUsername(), $this->getPassword());
+            return $array;
         }
 
 
