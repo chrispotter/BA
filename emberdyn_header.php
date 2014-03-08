@@ -24,9 +24,10 @@
     }
 
 
-    $user = new Users(7);
-    $user->setFirstName('Jimmy');
-    print_r($user->getValues());
+    $user = new Users(20);
+    $user->delete();
+
+
 
 
 

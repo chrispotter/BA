@@ -6,92 +6,123 @@
 
     class Users {
 
-        private $id;
-        private $first_name;
-        private $last_name;
-        private $email;
-        private $username;
-        private $password;
+        private $table_name;
         private $db;
 
-        function __construct($id){
+        private $fields = array
+        (
+            'id'            =>'',
+            'first_name'    =>'',
+            'last_name'     =>'',
+            'email'         =>'',
+            'username'      =>'',
+            'password'      =>''
+        );
 
+        function __construct($arg = null){
+
+            $this->table_name = DB_TBL_PREFIX . "users";
             $this->db = new Database();
 
-            if(isset($id)){
-                $user = $this->db->select(DB_TBL_PREFIX . 'users', 'id', $id);
-                $this->id = $user[0]['id'];
-                $this->first_name = $user[0]['first_name'];
-                $this->last_name = $user[0]['last_name'];
-                $this->email = $user[0]['email'];
-                $this->username = $user[0]['username'];
-                $this->password = $user[0]['password'];
-            } else {
+            if($arg == 0){
+                $arg = null;
+            }
 
+            $arg_type = getType($arg);
+
+            if(isset($arg)){
+                $user = null;
+                if($arg_type == 'integer'){
+                    $user = $this->db->select($this->table_name, 'id', $arg);
+                } else if($arg_type == 'string'){
+                    $user = $this->db->select($this->table_name, 'username', $arg);
+                }
+
+                $result_count = count($user);
+                if($result_count == 0){
+                    $this->createEmptyUser();
+                    return;
+                }
+
+                $this->fields['id'] = $user[0]['id'];
+                $this->fields['first_name'] = $user[0]['first_name'];
+                $this->fields['last_name'] = $user[0]['last_name'];
+                $this->fields['email'] = $user[0]['email'];
+                $this->fields['username'] = $user[0]['username'];
+                $this->fields['password'] = $user[0]['password'];
+
+            } else{
+                $this->createEmptyUser();
+            }
+        }
+
+        private function createEmptyUser(){
+
+            foreach($this->fields as $field){
+                $field = '';
             }
 
         }
 
-        function getId(){
-            return $this->id;
-        }
-
-        function setId($id){
-            $this->id = $id;
-        }
-
-        function getFirstName(){
-            return $this->first_name;
-        }
-
-        function setFirstName($fname){
-            $this->first_name = $fname;
-        }
-
-        function getLastName(){
-            return $this->last_name;
-        }
-
-        function setLastName($lname){
-            $this->last_name = $lname;
-        }
-
-        function getEmail(){
-            return $this->email;
-        }
-
-        function setEmail($email){
-            $this->email = $email;
-        }
-
-        function getUsername(){
-            return $this->username;
-        }
-
-        function setUsername($username){
-            $this->username = $username;
-        }
-
-        function getPassword(){
-            return $this->password;
-        }
-
-        function setPassword($password){
-            $this->password = $password;
-        }
-
         function save(){
-            //WORK ON ME!!!
+
+            //Insert a new user
+            if($this->fields['id'] == ''){
+                $this->db->insert($this->table_name, $this->getValues());
+            } else {
+                foreach($this->getValues() as $key=>$value){
+                    $this->db->update($this->table_name, $key, $value, 'id', $this->fields['id']);
+                }
+            }
+        }
+
+        function delete(){
+
+            if($this->fields['id'] == ''){
+               error_log('Unable to delete user.  No User ID Provided');
+            } else {
+                $this->db->delete($this->table_name, 'id', $this->fields['id']);
+            }
+
         }
 
         function getValues(){
-            $array = array( $this->getId(), $this->getFirstName(), $this->getLastName(),
-                            $this->getEmail(), $this->getUsername(), $this->getPassword());
-            return $array;
+            return $this->fields;
         }
 
+        public function __call($name, $arguments)
+        {
+            $parts = $this->splitAtUpperCase($name);
 
+            $type = $parts[0];
 
+            $field = '';
 
+            for($i = 1; $i < count($parts); $i++){
+                if($i == count($parts) - 1){
+                    $field .= $parts[$i];
+                } else {
+                    $field .= $parts[$i]  . '_';
+                }
+            }
+
+            switch($type){
+
+                case 'set':
+                    $this->fields[strtolower($field)] = $arguments[0];
+                    break;
+
+                case 'get':
+                    return $this->fields[strtolower($field)];
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+        public function splitAtUpperCase($s) {
+            return preg_split('/(?=[A-Z])/', $s, -1, PREG_SPLIT_NO_EMPTY);
+        }
 
     }
