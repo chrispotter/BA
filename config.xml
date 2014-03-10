@@ -5,6 +5,7 @@
     <global>
         <site_title>Emberdyn</site_title>
         <debug_mode>true</debug_mode>
+        <current_theme>default_theme</current_theme>
     </global>
     <!-- ... -->
     <!-- Database Config -->

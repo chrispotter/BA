@@ -48,6 +48,22 @@
         return $array;
     }
 
+    /**
+     * @return mixed
+     * Retrieves the site title
+     */
+    function getSiteTitle(){
+        return SITE_TITLE;
+    }
+
+    /**
+     * @return mixed
+     * Retrieves the folder name of the current theme
+     */
+    function getCurrentTheme(){
+        return CURRENT_THEME;
+    }
+
 
 
 
