@@ -1,11 +1,10 @@
-
-
 <config>
     <!-- Global Config -->
     <global>
         <site_title>Emberdyn</site_title>
         <debug_mode>true</debug_mode>
         <current_theme>default_theme</current_theme>
+        <admin_folder>admin</admin_folder>
     </global>
     <!-- ... -->
     <!-- Database Config -->
@@ -13,8 +12,8 @@
         <db_driver>mysql</db_driver>
         <db_host>localhost</db_host>
         <db_name>emberdyn</db_name>
-        <db_user>emberdyn</db_user>
-        <db_pass>emberdyn</db_pass>
+        <db_user>root</db_user>
+        <db_pass>root</db_pass>
         <db_prefix>em_</db_prefix>
     </database>
     <!-- ... -->

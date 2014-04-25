@@ -15,6 +15,7 @@
     //------------------------------------------------------------------------------------------------------------||
     require(INCLUDES_PATH . 'helpers.php');
     require(BASE_PATH . 'config.php');
+
     require(INCLUDES_PATH . 'models/models.php');
     require(INCLUDES_PATH . 'controllers/theme_engine.php');
     //------------------------------------------------------------------------------------------------------------||

@@ -64,6 +64,11 @@
         return CURRENT_THEME;
     }
 
+    function getNode($xpath){
+        $xpathArray = explode('/', $xpath);
+        $config = xmlToArray('./config.xml');
+        return $config['config'][$xpathArray[0]][$xpathArray[1]];
+    }
 
 
 
