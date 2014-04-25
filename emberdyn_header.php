@@ -7,17 +7,19 @@
     //Essential Constants - NO NOT ALTER THIS SECTION
     //------------------------------------------------------------------------------------------------------------||
     if ( !defined('BASE_PATH') ) define('BASE_PATH', dirname(__FILE__) . '/');
-    if ( !defined('INCLUDES_PATH') ) define('INCLUDES_PATH', BASE_PATH . 'includes/');
-    if ( !defined('ADDONS_PATH') ) define('ADDONS_PATH', BASE_PATH . 'addons/');
+    if ( !defined('CORE_PATH') ) define('CORE_PATH', BASE_PATH . 'core/');
     //------------------------------------------------------------------------------------------------------------||
 
     //Includes
     //------------------------------------------------------------------------------------------------------------||
-    require(INCLUDES_PATH . 'helpers.php');
+    require(CORE_PATH . 'helpers.php');
     require(BASE_PATH . 'config.php');
 
-    require(INCLUDES_PATH . 'models/models.php');
-    require(INCLUDES_PATH . 'controllers/theme_engine.php');
+    if ( !defined('THEMES_PATH') ) define('THEMES_PATH', BASE_PATH . THEMES_FOLDER . '/');
+    if ( !defined('PLUGINS_PATH') ) define('PLUGINS_PATH', BASE_PATH . PLUGINS_FOLDER . '/');
+
+    require(CORE_PATH . 'models/models.php');
+    require(CORE_PATH . 'controllers/theme_engine.php');
     //------------------------------------------------------------------------------------------------------------||
 
     //Handle Debugging

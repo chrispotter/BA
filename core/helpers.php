@@ -49,6 +49,17 @@
     }
 
     /**
+     * @param $xpath
+     * @return mixed
+     */
+
+    function getNode($xpath){
+        $xpathArray = explode('/', $xpath);
+        $config = xmlToArray('./config.xml');
+        return $config['config'][$xpathArray[0]][$xpathArray[1]];
+    }
+
+    /**
      * @return mixed
      * Retrieves the site title
      */
@@ -64,11 +75,7 @@
         return CURRENT_THEME;
     }
 
-    function getNode($xpath){
-        $xpathArray = explode('/', $xpath);
-        $config = xmlToArray('./config.xml');
-        return $config['config'][$xpathArray[0]][$xpathArray[1]];
-    }
+
 
 
 

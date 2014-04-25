@@ -6,6 +6,6 @@
 
     //Display the current theme
     //------------------------------------------------------------------------------------------------------------||
-    require_once(ADDONS_PATH . 'themes/' . getCurrentTheme() . '/header.php');
-    require_once(ADDONS_PATH . 'themes/' . getCurrentTheme() . '/footer.php');
+    require_once(THEMES_PATH . getCurrentTheme() . '/header.php');
+    require_once(THEMES_PATH . getCurrentTheme() . '/footer.php');
     //------------------------------------------------------------------------------------------------------------||

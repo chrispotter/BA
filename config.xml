@@ -5,6 +5,8 @@
         <debug_mode>true</debug_mode>
         <current_theme>default_theme</current_theme>
         <admin_folder>admin</admin_folder>
+        <plugins_folder>plugins</plugins_folder>
+        <themes_folder>themes</themes_folder>
     </global>
     <!-- ... -->
     <!-- Database Config -->
