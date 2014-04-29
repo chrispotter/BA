@@ -1,4 +1,45 @@
-RewriteEngine on
-RewriteCond %{HTTP_REFERER} !^http://(www\.)?localhost [NC]
-RewriteCond %{HTTP_REFERER} !^http://(www\.)?localhost.*$ [NC]
-RewriteRule \.(xml)$ - [F]
+<IfModule mod_rewrite.c>
+
+############################################
+## enable rewrites
+
+    Options +FollowSymLinks
+    RewriteEngine on
+
+############################################
+## workaround for HTTP authorization
+## in CGI environment
+
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+############################################
+## TRACE and TRACK HTTP methods disabled to prevent XSS attacks
+
+    RewriteCond %{REQUEST_METHOD} ^TRAC[EK]
+    RewriteRule .* - [L,R=405]
+
+
+############################################
+## never rewrite for existing files, directories and links
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-l
+
+############################################
+## rewrite everything else to index.php
+
+    RewriteRule .* index.php [L]
+
+############################################
+## prevent access to the config.xml
+
+    RewriteCond %{HTTP_REFERER} !^http://(www\.)?localhost [NC]
+    RewriteCond %{HTTP_REFERER} !^http://(www\.)?localhost.*$ [NC]
+    RewriteRule \.(xml)$ - [F]
+
+</IfModule>
+
+
+
+

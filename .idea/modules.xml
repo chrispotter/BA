@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/emberdyn.iml" filepath="$PROJECT_DIR$/.idea/emberdyn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/BlueAcorn.iml" filepath="$PROJECT_DIR$/.idea/BlueAcorn.iml" />
     </modules>
   </component>
 </project>

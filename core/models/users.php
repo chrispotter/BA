@@ -4,7 +4,7 @@
      *  Emberdyn Users Model Object
      */
 
-    class Users {
+    class User {
 
         private $table_name;
         private $db;
@@ -16,7 +16,8 @@
             'last_name'     =>'',
             'email'         =>'',
             'username'      =>'',
-            'password'      =>''
+            'password'      =>'',
+            'image_url'     =>''
         );
 
         function __construct($arg = null){
@@ -88,6 +89,10 @@
 
         function getValues(){
             return $this->fields;
+        }
+
+        function setValues($values){
+            $this->fields = $values;
         }
 
         public function __call($name, $arguments)

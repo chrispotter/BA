@@ -9,7 +9,6 @@
     //------------------------------------------------------------------------------------------------------------||
     define('SITE_TITLE',        getNode('global/site_title'));      //Site Title
     define('ADMIN_FOLDER',      getNode('global/admin_folder'));    //Admin Folder
-    define('PLUGINS_FOLDER',    getNode('global/plugins_folder'));  //Plugins Folder
     define('THEMES_FOLDER',     getNode('global/themes_folder'));   //Themes Folder
     define('DEBUG_MODE',        getNode('global/debug_mode'));      //Debug Mode
     define('CURRENT_THEME',     getNode('global/current_theme'));   //Current Theme

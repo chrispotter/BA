@@ -4,5 +4,5 @@
      *  Models Bootstrap
      */
 
-    require(INCLUDES_PATH . 'models/db.php');
-    require(INCLUDES_PATH . 'models/users.php');
+    require(CORE_PATH . 'models/db.php');
+    require(CORE_PATH . 'models/users.php');
