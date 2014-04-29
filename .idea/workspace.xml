@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db23797a-b041-4ac1-86fe-ded60a2e9ca4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/emberdyn.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/placeholder.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/admin/index.html" afterPath="$PROJECT_DIR$/admin/index.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/emberdyn_header.php" afterPath="$PROJECT_DIR$/ba_header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.php" afterPath="$PROJECT_DIR$/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/models/models.php" afterPath="$PROJECT_DIR$/core/models/models.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/models/users.php" afterPath="$PROJECT_DIR$/core/models/users.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BlueAcorn.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,7 +55,7 @@
       <file leaf-file-name=".htaccess" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.htaccess">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="61" selection-start="307" selection-end="307" vertical-scroll-proportion="0.24053451" vertical-offset="0" max-vertical-offset="918">
+            <state line="29" column="39" selection-start="810" selection-end="810" vertical-scroll-proportion="0.58129174" vertical-offset="0" max-vertical-offset="918">
               <folding />
             </state>
           </provider>
@@ -265,7 +249,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -459,7 +443,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="61" selection-start="307" selection-end="307" vertical-scroll-proportion="0.24053451" vertical-offset="0" max-vertical-offset="918">
+        <state line="29" column="39" selection-start="810" selection-end="810" vertical-scroll-proportion="0.58129174" vertical-offset="0" max-vertical-offset="918">
           <folding />
         </state>
       </provider>
