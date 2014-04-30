@@ -1,18 +1,30 @@
 <?php
 
     /**
-     *  Emerdyn Entry Point
+     *  Bootstrap
      */
 
-    //Essential Constants - NO NOT ALTER THIS SECTION
+    //Includes
     //------------------------------------------------------------------------------------------------------------||
-    if ( !defined('BASE_PATH') ) define('BASE_PATH', dirname(__FILE__) . '/');
-    if ( !defined('CORE_PATH') ) define('CORE_PATH', BASE_PATH . 'core/');
+    require_once('config.php');
+
+    if ( !defined('THEMES_PATH') ) define('THEMES_PATH', BASE_PATH . THEMES_FOLDER . '/');
+
+    require_once(CORE_PATH . 'models/models.php');
+    require_once(CORE_PATH . 'controllers/theme_engine.php');
     //------------------------------------------------------------------------------------------------------------||
 
-    echo BASE_PATH;
-
-    require(BASE_PATH . '/ba_header.php');
+    //Handle Debugging
+    //------------------------------------------------------------------------------------------------------------||
+    if(DEBUG_MODE == 'true'){
+        error_reporting(E_ALL);
+        ini_set('display_errors', 1);
+    } else if (DEBUG_MODE == 'false'){
+        error_reporting(0);
+    } else {
+        echo DEBUG_ERROR;
+    }
+    //------------------------------------------------------------------------------------------------------------||
 
 
 

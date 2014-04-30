@@ -2,6 +2,7 @@
     <!-- Global Config -->
     <global>
         <site_title>Blue Acorn - Magento Study Guide</site_title>
+        <base_url>http://localhost/BlueAcorn/</base_url>
         <debug_mode>true</debug_mode>
         <current_theme>default_theme</current_theme>
         <admin_folder>admin</admin_folder>

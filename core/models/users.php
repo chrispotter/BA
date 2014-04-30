@@ -4,6 +4,9 @@
      *  Emberdyn Users Model Object
      */
 
+    include('../../config.php');
+    include_once('db.php');
+
     class User {
 
         private $table_name;
@@ -17,17 +20,14 @@
             'email'         =>'',
             'username'      =>'',
             'password'      =>'',
-            'image_url'     =>''
+            'image_url'     =>'',
+            'user_type'     =>''
         );
 
         function __construct($arg = null){
 
             $this->table_name = DB_TBL_PREFIX . "users";
             $this->db = new Database();
-
-            if($arg == 0){
-                $arg = null;
-            }
 
             $arg_type = getType($arg);
 
@@ -51,6 +51,8 @@
                 $this->fields['email'] = $user[0]['email'];
                 $this->fields['username'] = $user[0]['username'];
                 $this->fields['password'] = $user[0]['password'];
+                $this->fields['image_url'] = $user[0]['image_url'];
+                $this->fields['user_type'] = $user[0]['user_type'];
 
             } else{
                 $this->createEmptyUser();
@@ -62,7 +64,6 @@
             foreach($this->fields as $field){
                 $field = '';
             }
-
         }
 
         function save(){

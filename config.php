@@ -5,8 +5,21 @@
     *   DO NOT MAKE CHANGES TO THIS FILE!!!!!
     */
 
+    const DS = DIRECTORY_SEPARATOR;
+
+    //Essential Constants - NO NOT ALTER THIS SECTION
+    //------------------------------------------------------------------------------------------------------------||
+    if ( !defined('BASE_PATH') ) define('BASE_PATH', dirname(__FILE__) . DS);
+    if ( !defined('CORE_PATH') ) define('CORE_PATH', BASE_PATH . 'core' . DS);
+    //------------------------------------------------------------------------------------------------------------||
+
+    $test = CORE_PATH;
+
+    require(CORE_PATH . 'helpers.php');
+
     //Global Constants
     //------------------------------------------------------------------------------------------------------------||
+    define('BASE_URL',          getNode('global/base_url'));        //Base URL
     define('SITE_TITLE',        getNode('global/site_title'));      //Site Title
     define('ADMIN_FOLDER',      getNode('global/admin_folder'));    //Admin Folder
     define('THEMES_FOLDER',     getNode('global/themes_folder'));   //Themes Folder

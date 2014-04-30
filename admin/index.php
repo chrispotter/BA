@@ -1,18 +1,19 @@
 <?php
 
-    include('../core/models/users.php');
+    const DS = DIRECTORY_SEPARATOR;
 
-
-    //Essential Constants - NO NOT ALTER THIS SECTION
+    //Includes
     //------------------------------------------------------------------------------------------------------------||
-    if ( !defined('BASE_PATH') ) define('BASE_PATH', dirname(__FILE__) . '/../');
-    if ( !defined('CORE_PATH') ) define('CORE_PATH', BASE_PATH . 'core/../');
+    require_once('../config.php');
+    require_once('../core/models/models.php');
+
+    if ( !defined('THEMES_PATH') ) define('THEMES_PATH', BASE_PATH . THEMES_FOLDER . '/');
+
+    require_once(CORE_PATH . 'models/models.php');
     //------------------------------------------------------------------------------------------------------------||
 
-    echo BASE_PATH;
-
-    require(BASE_PATH . '/ba_header.php');
-
+    //Handle Debugging
+    //------------------------------------------------------------------------------------------------------------||
     if(DEBUG_MODE == 'true'){
         error_reporting(E_ALL);
         ini_set('display_errors', 1);
@@ -21,12 +22,24 @@
     } else {
         echo DEBUG_ERROR;
     }
+    //------------------------------------------------------------------------------------------------------------||
 
-    $test = new User();
-    $vals = array('id'=>'', 'first_name'=>'Test', 'last_name'=>'Johnson', 'email'=>'test@test.com', 'username'=>'tjohnson', 'password'=>'12345', 'image_url'=>'test');
-    $test->setValues($vals);
+    startSession();
 
-    var_dump($test);
-    //$test->save();
+    getParameter('session', 'is_admin_logged_in');
 
-?>
+    if(getParameter('session', 'is_admin_logged_in') != 'true'){
+        include_once(CORE_PATH .'views/admin_login_view.phtml');
+
+    } else {
+        include_once(CORE_PATH .'views/admin_logout_view.phtml');
+        include_once(CORE_PATH . 'views/admin_main_view.phtml');
+        /* SHOW ADMIN PANEL */
+
+
+
+    }
+
+
+
+

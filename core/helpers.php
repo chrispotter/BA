@@ -55,7 +55,7 @@
 
     function getNode($xpath){
         $xpathArray = explode('/', $xpath);
-        $config = xmlToArray('./config.xml');
+        $config = xmlToArray(BASE_PATH . 'config.xml');
         return $config['config'][$xpathArray[0]][$xpathArray[1]];
     }
 
@@ -74,6 +74,64 @@
     function getCurrentTheme(){
         return CURRENT_THEME;
     }
+
+
+    function getParameter($type, $param){
+
+        switch($type){
+
+            case 'post':
+                if (isset ($_POST[$param])){
+                    return $_POST[$param];
+                } else {
+                    return "The parameter <strong>{$param}</strong> has not been set.";
+                }
+                break;
+            case 'get':
+                if (isset ($_GET[$param])){
+                    return $_GET[$param];
+                } else {
+                    return "The parameter <strong>{$param}</strong> has not been set.";
+                }
+                break;
+            case 'session':
+                if (isset ($_SESSION[$param])){
+                    return $_SESSION[$param];
+                } else {
+                    return "The parameter <strong>{$param}</strong> has not been set.";
+                }
+                break;
+
+            default:
+                return "<strong>{$type}</strong> is not a valid parameter type";
+                break;
+        }
+    }
+
+    function setParameter($type, $param, $value){
+
+        switch($type){
+
+            case 'post':
+                $_POST[$param] = $value;
+                break;
+            case 'get':
+                $_GET[$param] = $value;
+                break;
+            case 'session':
+                $_SESSION[$param] = $value;
+                break;
+            default:
+                return "<strong>{$type}</strong> is not a valid parameter type";
+                break;
+        }
+    }
+
+    function startSession(){
+        session_start();
+    }
+
+
 
 
 
