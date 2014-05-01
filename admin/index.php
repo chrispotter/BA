@@ -1,10 +1,8 @@
 <?php
 
-    const DS = DIRECTORY_SEPARATOR;
-
     //Includes
     //------------------------------------------------------------------------------------------------------------||
-    require_once('../config.php');
+    require_once("../config.php");
     require_once('../core/models/models.php');
 
     if ( !defined('THEMES_PATH') ) define('THEMES_PATH', BASE_PATH . THEMES_FOLDER . '/');

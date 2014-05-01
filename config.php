@@ -1,7 +1,7 @@
 <?php
 
     /**
-    *   PHP Configuration for Emberdyn.
+    *   PHP Configuration for BlueAcorn.
     *   DO NOT MAKE CHANGES TO THIS FILE!!!!!
     */
 
@@ -12,8 +12,6 @@
     if ( !defined('BASE_PATH') ) define('BASE_PATH', dirname(__FILE__) . DS);
     if ( !defined('CORE_PATH') ) define('CORE_PATH', BASE_PATH . 'core' . DS);
     //------------------------------------------------------------------------------------------------------------||
-
-    $test = CORE_PATH;
 
     require(CORE_PATH . 'helpers.php');
 
