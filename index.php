@@ -6,6 +6,7 @@
 
     //Includes
     //------------------------------------------------------------------------------------------------------------||
+
     require_once('config.php');
 
     if ( !defined('THEMES_PATH') ) define('THEMES_PATH', BASE_PATH . THEMES_FOLDER . '/');

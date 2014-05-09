@@ -4,7 +4,7 @@
  *  Emberdyn Users Model Object
  */
 
-include('../../config.php');
+include(BASE_PATH . 'config.php');
 include_once('db.php');
 
 class Question {

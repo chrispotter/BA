@@ -1,7 +1,7 @@
 <?php
 
     /**
-    *   PHP Configuration for Emberdyn.
+    *   PHP Configuration for BlueAcorn.
     *   DO NOT MAKE CHANGES TO THIS FILE!!!!!
     */
 
