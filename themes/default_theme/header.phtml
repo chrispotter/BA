@@ -1,0 +1,29 @@
+<?php
+/**
+ *
+ */
+?>
+
+<html>
+    <head>
+        <title><?php echo getSiteTitle(); ?></title>
+        <?php includeCSS('themes/default_theme/css/main.css'); ?>
+        <?php includeJS('lib/ace/src-noconflict/ace.js') ?>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="blueacorn_main">
+            <div id="blueacorn_header">
+                <?php startSession(); ?>
+                <span id="title"><h2>Welcome to <?php echo getSiteTitle() ?></h2></span>
+                <?php if(getParameter('session', 'is_logged_in') != true) : ?>
+                <span class="login"><a href="<?php echo BASE_URL . 'themes/default_theme/login.phtml' ?>">Login</a></span>
+                <span>&nbsp; | &nbsp;</span>
+                <span class="register"><a href="<?php echo BASE_URL . 'themes/default_theme/register.phtml' ?>">Register</a></span>
+                <?php else : ?>
+                <span class="login"><form action="<?php echo BASE_URL . 'core/controllers/logout.php'; ?>" method="post"><button type="submit">Logout</button></form></span>
+                <?php endif; ?>
+            </div>
+
+
+

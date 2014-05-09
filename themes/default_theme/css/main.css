@@ -1,0 +1,36 @@
+span{ display: inline-block !important;}
+
+#blueacorn-login-block{
+    padding: 10px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #888;
+}
+
+#blueacorn-register{
+    padding: 10px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #888;
+}
+
+.validation-error{
+    border: 1px solid red;
+    content: "Please Enter a Value";
+}
+
+.message-box{
+
+}
+
+.msg-error{
+    background-color: indianred;
+    color: #000;
+}
+
+.msg-success{
+    background-color: green;
+    color: #fff;
+}

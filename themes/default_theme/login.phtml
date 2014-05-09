@@ -1,0 +1,14 @@
+<?php require_once('../../config.php'); ?>
+<?php includeCSS('css/main.css'); ?>
+<?php includeJS('js/jquery2.js'); ?>
+<?php includeJS('js/main.js'); ?>
+<div id="blueacorn-login-block">
+    <form action="<?php echo BASE_URL . 'core/controllers/login.php'; ?>" method="post" id="login-form">
+        <label for="username">Username</label><br/>
+        <input type="text" id="username" name="username" /><br/>
+        <label for="password">Password</label><br/>
+        <input type="password" id="password" name="password"/><br/>
+        <button type="button" id="login-submit">Login</button>
+    </form>
+    <div class="message-box"></div>
+</div>

@@ -1,0 +1,27 @@
+<?php require_once('../../config.php'); ?>
+<?php includeCSS('css/main.css'); ?>
+<?php includeJS('js/jquery2.js'); ?>
+<?php includeJS('js/main.js'); ?>
+
+<div id="blueacorn-register">
+    <div>Register to add answers to the Study Guide Questions</div>
+    <br/>
+    <form action="<?php echo BASE_URL . 'core/controllers/register.php'; ?>" method="post">
+      <label for="first-name">First Name</label><br/>
+      <input id="first-name" type="text" name="first-name"/><br/>
+      <label for="last-name">Last Name</label><br/>
+      <input id="last-name" type="text" name="last-name"/><br/>
+      <label for="register-email">Email</label><br/>
+      <input id="register-email" type="text" name="register-email"/><br/>
+      <label for="register-email-verify">Verify Email</label><br/>
+      <input id="register-email-verify" type="text" name="register-email-verify"/><br/>
+      <label for="register-username">Username</label><br/>
+      <input id="register-username" type="text" name="register-username"/><br/>
+      <label for="register-password">Password</label><br/>
+      <input id="register-password" type="password" name="register-password"/><br/>
+      <label for="register-password-verify">Verify Password</label><br/>
+      <input id="register-password-verify" type="password" name="register-password-verify"/><br/>
+      <br/>
+      <button type="submit" id="register-submit">Register</button>
+    </form>
+    </div>

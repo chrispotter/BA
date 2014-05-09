@@ -101,6 +101,13 @@
                     return "The parameter <strong>{$param}</strong> has not been set.";
                 }
                 break;
+            case 'server':
+                if (isset ($_SERVER[$param])){
+                    return $_SERVER[$param];
+                } else {
+                    return "The parameter <strong>{$param}</strong> has not been set.";
+                }
+                break;
 
             default:
                 return "<strong>{$type}</strong> is not a valid parameter type";
@@ -129,6 +136,14 @@
 
     function startSession(){
         session_start();
+    }
+
+    function includeJS($path){
+        echo "<script src='" . $path . "' type='text/javascript'></script>";
+    }
+
+    function includeCSS($path){
+        echo "<link rel='stylesheet' type='text/css' href='" . $path . "'>";
     }
 
 
